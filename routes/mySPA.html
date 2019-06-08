@@ -1,0 +1,167 @@
+<DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>Packing List App</title>
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="/javascripts/my.js"></script> 
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="/themes/testing2.min.css" />
+        <link rel="stylesheet" href="/themes/jquery.mobile.icons.min.css" />  
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.js"></script>
+ 
+    </head>
+
+
+
+    <body>
+
+        <div data-role="page" id="home" data-theme="a">
+
+            <div  data-role="header">
+                <h3>The Packing List App</h3>
+                <h4>Home Page</h4>
+                <!--
+                    <a href="#second" class="ui-btn-right">Next</a>
+                -->
+            </div>
+
+            <div data-role="content">
+
+                <div>
+                    <ul data-role="listview" data-autodividers="true" 
+                    data-theme="c" id="products"></ul>
+                </div>
+
+                <br />
+                <a href="#addpage" class="ui-btn" data-transition="flip">Go to Add Page</a>
+                <br />
+                <h5>To delete a product, copy the product name then paste after clicking next link.</h5>
+                <a href="#deletepage" class="ui-btn" data-transition="flip">Go to Delete Page</a>
+            </div>
+
+            <div data-role="footer">
+                <h1>copyright Izzati Hizam 2019</h1>
+            </div>
+
+        </div>
+
+
+
+        <div data-role="page" id="details-page">
+            <div data-theme="c" data-role="header">
+                <h3>The Packing List App</h3>
+                <h4>Details Page</h4>
+                <a href="#home" class="ui-btn-left">Back</a>
+            </div>
+
+            <div data-role="content">
+
+                <p id="detailParmHere" hidden>change1</p>
+                <p id="showdata">change2</p>
+            </div>
+
+            <br />
+                <a href="#editpage" class="ui-btn" data-transition="flip">Go to Edit Page</a>
+                <br />
+
+                <div data-role="content">
+
+                    <p id="detailParmHere" hidden>change1</p>
+                    <p id="showdata">change2</p>
+                </div>
+
+            <div data-role="footer">
+                <h1>copyright Izzati Hizam 2019</h1>
+            </div>
+        </div>
+
+        </div>
+
+        <div data-role="page" id="editpage" data-theme="c">
+            <div data-role="header">
+                <h3>The Packing List App</h3>
+                <h4>Edit Item</h4>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div>
+                    <h2>Edit Item</h2>
+                    Item: <input type="text" id="editItem" size="25" /> <br />
+                    Category:
+                    <select id="editDescription" >
+                        <option value="Carry On">Carry On</option>
+                        <option value="Beach Bag">Beach Bag</option>
+                        <option value="Main Bag">Main Bag</option>
+                      </select> 
+                    <input type="button" value="Save" onclick="saveItem();" />
+                </div>
+
+
+                <a href="#home" class="ui-btn" data-transition="flip" data-rel="back">Go Back</a>
+
+            </div>
+
+            <div data-role="footer">
+                <h1>copyright Izzati Hizam 2019</h1>
+            </div>
+        </div>
+
+
+        <div data-role="page" id="addpage" data-theme="c">
+            <div data-role="header">
+                <h3>The Packing List App</h3>
+                <h4>Create List</h4>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div>
+                    <h2>Add New Item</h2>
+                    Item: <input type="text" id="newItem" size="25" /> <br />
+                    Category:
+                    <select id="newDescription" >
+                        <option value="Carry On">Carry On</option>
+                        <option value="Beach Bag">Beach Bag</option>
+                        <option value="Main Bag">Main Bag</option>
+                      </select> 
+                    <input type="button" value="Add New" onclick="addItem();" />
+                </div>
+
+
+                <a href="#home" class="ui-btn" data-transition="flip" data-rel="back">Go Back</a>
+
+            </div>
+
+            <div data-role="footer">
+                <h1>copyright Izzati Hizam 2019</h1>
+            </div>
+        </div>
+
+
+
+        <div data-role="page" id="deletepage" data-theme="c">
+            <div data-role="header">
+                <h3>The Packing List App</h3>
+                <h4>Delete Page</h4>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div>
+                    <h2>Delete a Note by Note Subject</h2>
+                    <input type="text" id="deleteNoteSubject" size="25" />
+                    <input type="button" value="Delete" onclick="deleteNote();" />
+                </div>
+
+                <a href="#home" class="ui-btn" data-transition="flip" data-rel="back">Go Back</a>
+
+            </div>
+
+            <div data-role="footer">
+                <h1>copyright Izzati Hizam 2019</h1>
+            </div>
+        </div>
+
+    </body>
+
+    </html>
