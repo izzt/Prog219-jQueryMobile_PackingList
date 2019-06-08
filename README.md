@@ -1,1 +1,1 @@
-# Prog219-HW7-jQueryMobile
+# Prog219-jQueryMobile_PackingList
